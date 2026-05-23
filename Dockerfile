@@ -1,12 +1,12 @@
-# استخدام نسخة جافا 21 (بما أن إصدارات Paper الجديدة غالباً ما تتطلب Java 21)
-FROM openjdk:21-slim
+# استخدام صورة Eclipse Temurin (المعتمدة حالياً) لـ Java 21
+FROM eclipse-temurin:21-jre-jammy
 
 # تثبيت الأدوات اللازمة
 RUN apt-get update && apt-get install -y curl wget
 
 WORKDIR /app
 
-# تحميل ملف السيرفر المحدد الخاص بك
+# تحميل ملف السيرفر مباشرة
 RUN wget -O paper.jar https://fill-data.papermc.io/v1/objects/cfb9281c2657e21ecc8acdaa9efbd6b5b3e873fb5bac4c3b8ba4bba67aa13ee2/paper-26.1.2-65.jar
 
 # تحميل Playit.gg
