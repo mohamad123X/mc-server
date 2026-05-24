@@ -1,0 +1,3 @@
+# Acceptance of EULA for Minecraft Server Hosting on Railway
+# Sun May 24 2026
+eula=true
